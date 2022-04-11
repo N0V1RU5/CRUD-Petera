@@ -1,0 +1,23 @@
+<table class="table table-striped">
+    <h1>Employee List</h1>
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Room</th>
+        <th>Phone</th>
+        <th>Job</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{# employee }}
+        <tr>
+            <td><a href="employeeDetail.php?employee_id={{ employee_id }}">{{surname}} {{ employeeName }}</a></td>
+            <td>{{ roomName }}</td>
+            <td>{{ phone }}</td>
+            <td>{{ job }}</td>
+        </tr>
+    {{/employee}}
+    </tbody>
+</table>
+<a href='../'><button type="button" class="btn btn-primary">Database Browser Menu</button></a>
+<a href='../logout.php'><button type="button" class="btn btn-primary">Logout</button></a>

@@ -1,0 +1,19 @@
+{{#room}}
+    <table class="table table-striped">
+        <thead class="thead-dark">
+        <th scope="col" colspan="2">Room {{name}}</th>
+        </thead>
+        <tbody>
+        <tr><td><a style="font-weight: bold">Name:</a> {{name}}</td></tr>
+        <tr><td><a style="font-weight: bold">No:</a> {{no}}</td></tr>
+        <tr><td><a style="font-weight: bold">Phone:</a> {{phone}}</td></tr>
+        <tr></tr>
+        <tr><td style="font-weight: bold; text-align: center" >People:</td></tr>
+        {{#keyNames}}
+            <tr><td style="text-align: center">{{.}}</td></tr>
+        {{/keyNames}}
+        </tbody>
+    </table>
+{{/room}}
+<a href='../room'><button type="button" class="btn btn-primary">Room List</button></a>
+<a href='../logout.php'><button type="button" class="btn btn-primary">Logout</button></a>

@@ -1,0 +1,27 @@
+<form method="post">
+
+    <div class="my-2">
+        <label for="name">Room name</label>
+        <input required id="name" name="name" class="form-control" type="text" value="{{room.name}}"/>
+        {{#errors.name}}<div class="form-text text-warning">{{errors.name}}</div>{{/errors.name}}
+    </div>
+    <div class="my-2">
+        <label for="no">No.</label>
+        <input required id="no" name="no" class="form-control" type="text" value="{{room.no}}"/>
+        {{#errors.no}}<div class="form-text text-warning">{{errors.no}}</div>{{/errors.no}}
+    </div>
+    <div class="my-2">
+        <label for="phone">Phone</label>
+        <input id="phone" name="phone" class="form-control" type="text" value="{{room.phone}}"/>
+        {{#errors.phone}}<div class="form-text text-warning">{{errors.phone}}</div>{{/errors.phone}}
+    </div>
+
+    <div class="my-2">
+        {{#create}}<input type="hidden" name="action" value="create" />
+            <input type="submit" value="Create" class="btn btn-primary" />{{/create}}
+        {{#update}}<input type="hidden" name="action" value="update" />
+            <input type="hidden" name="room_id" value="{{room.room_id}}">
+            <input type="submit" value="Update" class="btn btn-primary" />{{/update}}
+        <a href='../room'><button type="button" class="btn btn-primary">Back to room listing.</button></a>
+    </div>
+</form>

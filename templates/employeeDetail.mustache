@@ -1,0 +1,17 @@
+{{# employee }}
+    <table class="table table-striped">
+        <thead class="thead-dark">
+        <th scope="col" colspan="2">Employee {{eName}} {{surname}}</th>
+        </thead>
+        <tbody>
+        <tr><td style="font-weight: bold">Name:</td><td>{{eName}} {{surname}}</td></tr>
+        <tr><td style="font-weight: bold">Job:</td><td>{{job}}</td></tr>
+        <tr><td style="font-weight: bold">Wage:</td><td>{{wage}}</td></tr>
+        <tr><td style="font-weight: bold">Rooms:</td><td>{{roomName}}</td></tr>
+        <tr><td style="font-weight: bold">Keys:</td><td>&nbsp;</td></tr>
+        {{#keyNames}}<tr><td>&nbsp;</td><td>{{.}}</td></tr>{{/keyNames}}
+        </tbody>
+    </table>
+{{/ employee }}
+<a href='../employee'><button type="button" class="btn btn-primary">Employee List</button></a>
+<a href='../logout.php'><button type="button" class="btn btn-primary">Logout</button></a>

@@ -1,0 +1,29 @@
+<table class="table table-striped">
+    <h1>Room List</h1>
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>No.</th>
+        <th>Phone</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{# rooms }}
+        <tr>
+            <td><a href="roomDetail.php?room_id={{ room_id }}">{{ name }}</a></td>
+            <td>{{ no }}</td>
+            <td>{{ phone }}</td>
+            <td><form action="delete.php" method="post" onsubmit="return confirm('Really delete?\n\n this action cannot be undone!');" style="display: inline-block;">
+                <input type="hidden" name="room_id" value="{{ room_id }}" />
+                <input type="submit" value="Delete" class="btn btn-danger">
+            </form>
+                <a href="update.php?room_id={{ room_id }}" class="btn btn-info">Edit</a>
+            </td>
+        </tr>
+    {{/rooms}}
+    </tbody>
+</table>
+<a href='../'><button type="button" class="btn btn-primary">Database Browser Menu</button></a>
+<a href="../room/create.php"><button type="button" class="btn btn-primary">+ Create Room</button></a>
+<a href='../logout.php'><button type="button" class="btn btn-primary">Logout</button></a>
